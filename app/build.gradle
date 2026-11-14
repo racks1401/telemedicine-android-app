@@ -33,12 +33,15 @@ android {
     buildTypes {
         debug {
             signingConfig signingConfigs.config
+            // Build with -PuseFirebaseEmulator=true to point the debug app at the local Firebase Emulator Suite
+            buildConfigField "boolean", "USE_FIREBASE_EMULATOR", (project.findProperty("useFirebaseEmulator") == "true").toString()
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             debuggable true
         }
         release {
             signingConfig signingConfigs.config
+            buildConfigField "boolean", "USE_FIREBASE_EMULATOR", "false"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             debuggable false
@@ -50,6 +53,7 @@ android {
     }
     buildFeatures {
         viewBinding true
+        buildConfig true
     }
 }
 

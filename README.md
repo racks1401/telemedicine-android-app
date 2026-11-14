@@ -24,13 +24,37 @@ and **doctors** manage their availability, holidays and incoming appointments.
 
 <div align="center">
 
+### 🔐 Onboarding
+
 | Splash | Login (Email) | Login (Phone OTP) |
 |:---:|:---:|:---:|
 | <img src="docs/screenshots/splash.png" width="220" /> | <img src="docs/screenshots/login_email.png" width="220" /> | <img src="docs/screenshots/login_phone.png" width="220" /> |
 
+### 👤 Patient: find a doctor
+
+| Home | Doctor Profile & Reviews | My Profile |
+|:---:|:---:|:---:|
+| <img src="docs/screenshots/patient_home.png" width="220" /> | <img src="docs/screenshots/doctor_profile.png" width="220" /> | <img src="docs/screenshots/patient_profile.png" width="220" /> |
+
+### 📅 Patient: booking flow
+
+| 1. Date & Slot | 2. Patient Details | 3. Consultation Mode | 4. Summary |
+|:---:|:---:|:---:|:---:|
+| <img src="docs/screenshots/book_date_time.png" width="200" /> | <img src="docs/screenshots/book_patient_details.png" width="200" /> | <img src="docs/screenshots/book_consultation_mode.png" width="200" /> | <img src="docs/screenshots/book_summary.png" width="200" /> |
+
+| 5. Payment | 6. Confirmed | Appointment Details | Upcoming / Completed |
+|:---:|:---:|:---:|:---:|
+| <img src="docs/screenshots/book_payment.png" width="200" /> | <img src="docs/screenshots/booking_confirmed.png" width="200" /> | <img src="docs/screenshots/appointment_details.png" width="200" /> | <img src="docs/screenshots/patient_upcoming.png" width="200" /> |
+
+### 🩺 Doctor
+
+| Dashboard | Upcoming | Completed | Account | Holidays |
+|:---:|:---:|:---:|:---:|:---:|
+| <img src="docs/screenshots/doctor_dashboard.png" width="160" /> | <img src="docs/screenshots/doctor_upcoming.png" width="160" /> | <img src="docs/screenshots/doctor_completed.png" width="160" /> | <img src="docs/screenshots/doctor_account.png" width="160" /> | <img src="docs/screenshots/doctor_holidays.png" width="160" /> |
+
 </div>
 
-> More screens (patient home, doctor profile, booking flow, doctor dashboard) will be added to [`docs/screenshots`](docs/screenshots).
+> Screenshots use **demo data** from the local Firebase Emulator (see [Run with demo data](#-run-with-demo-data-firebase-emulator)). No real users are shown.
 
 ---
 
@@ -147,6 +171,28 @@ MYAPP_UPLOAD_KEY_PASSWORD=****
 ./gradlew assembleDebug
 ```
 Or press **Run ▶** in Android Studio.
+
+---
+
+## 🧪 Run with demo data (Firebase Emulator)
+
+Try the full app **without touching your real Firebase project**. The [`firebase-emulator/`](firebase-emulator) folder runs Auth, Realtime Database and Storage locally and seeds **5 demo doctors, 5 demo patients and 8 appointments**.
+
+```bash
+# 1. Start the local emulators (needs Firebase CLI + Java 11+)
+cd firebase-emulator
+firebase emulators:start --only auth,database,storage --project <your-firebase-project-id>
+
+# 2. In another terminal, load the demo data
+python firebase-emulator/seed.py
+
+# 3. Build & install a debug app that talks to the emulators
+./gradlew installDebug -PuseFirebaseEmulator=true
+```
+
+Log in with `doctor1@demo.mydoctor.test` … `doctor5@…` or `patient1@demo.mydoctor.test` … `patient5@…`. The password is `DEMO_PASSWORD` in [`seed.py`](firebase-emulator/seed.py). These accounts exist **only** inside the local emulator.
+
+> Without `-PuseFirebaseEmulator=true`, debug and release builds use the real Firebase project as usual. Emulator UI: http://127.0.0.1:4000
 
 ---
 

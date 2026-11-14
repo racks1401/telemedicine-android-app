@@ -272,7 +272,7 @@
                 android:minHeight="@dimen/_80sdp"
                 android:textSize="@dimen/_12sdp"
                 android:background="@drawable/bg_stroke_only"
-                android:hint="Wite your problems and symptoms.."
+                android:hint="Write your problems and symptoms.."
                 android:padding="@dimen/_11sdp" />
 
 

@@ -1,5 +1,7 @@
  package com.racks.mydoctor.activities;
 
+import com.racks.mydoctor.helper.InsetsHelper;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
@@ -31,6 +33,7 @@ import com.racks.mydoctor.models.AppointmentDetailModel;
         appointmentDetailModel = new ViewModelProvider(this).get(AppointmentDetailModel.class);
         appointmentDetailModel.setDoctorId(doctorId);
         setContentView(R.layout.activity_book_appointment);
+        InsetsHelper.applySystemBarInsets(this);
         fetchDoctorDetails(doctorId);
 
     }

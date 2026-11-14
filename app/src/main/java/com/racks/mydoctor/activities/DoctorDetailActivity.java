@@ -1,5 +1,7 @@
 package com.racks.mydoctor.activities;
 
+import com.racks.mydoctor.helper.InsetsHelper;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -49,6 +51,7 @@ public class DoctorDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctors_detail);
+        InsetsHelper.applySystemBarInsets(this);
         img_back_button = findViewById(R.id.img_back_button);
         img_doctor_profile = findViewById(R.id.img_doctor_profile);
         tv_doctor_name_header = findViewById(R.id.tv_doctor_name_header);

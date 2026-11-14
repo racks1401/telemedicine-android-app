@@ -1,5 +1,7 @@
 package com.racks.mydoctor.activities;
 
+import com.racks.mydoctor.helper.InsetsHelper;
+
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -18,6 +20,7 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+        InsetsHelper.applySystemBarInsets(this);
         tvHeader = findViewById(R.id.text_header);
         linearProgressBar = findViewById(R.id.linear_progress_indicator);
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_sign_up);

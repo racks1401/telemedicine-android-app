@@ -1,5 +1,7 @@
 package com.racks.mydoctor.activities;
 
+import com.racks.mydoctor.helper.InsetsHelper;
+
 import android.os.Bundle;
 import android.view.HapticFeedbackConstants;
 import android.view.LayoutInflater;
@@ -43,6 +45,7 @@ public class EditProfileDoctorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile_doctor);
+        InsetsHelper.applySystemBarInsets(this);
         recyclerView = findViewById(R.id.recycler_view_holidays);
         Button update_btn = findViewById(R.id.update_btn1);
         add_btn = findViewById(R.id.add_btn);

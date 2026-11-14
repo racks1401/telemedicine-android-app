@@ -1,5 +1,7 @@
 package com.racks.mydoctor.activities;
 
+import com.racks.mydoctor.helper.InsetsHelper;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        InsetsHelper.applySystemBarInsets(this);
         userDetailViewModel = new ViewModelProvider(this).get(UserDetailViewModel.class);
         sharedPreferenceManager = new SharedPreferenceManager(this);
         if (mAuth.getCurrentUser() == null) {

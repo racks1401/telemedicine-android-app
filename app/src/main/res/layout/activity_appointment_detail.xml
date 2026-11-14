@@ -304,7 +304,6 @@
                     android:visibility="gone">
 
                     <TextView
-                        android:id="@+id/tv_clinic_address"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -312,10 +311,10 @@
                         android:textSize="@dimen/_12ssp" />
 
                     <TextView
+                        android:id="@+id/tv_clinic_address"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Saketpuri colony, deokali bypass, Ayodhya, U.P."
                         android:textSize="@dimen/_12ssp" />
 
                 </LinearLayout>

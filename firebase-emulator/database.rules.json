@@ -1,0 +1,28 @@
+{
+  "rules": {
+    "Users": {
+      "Doctors": {
+        ".read": "auth != null",
+        "$uid": { ".write": "auth != null && auth.uid == $uid" }
+      },
+      "Patients": {
+        "$uid": {
+          ".read": "auth != null && auth.uid == $uid",
+          ".write": "auth != null && auth.uid == $uid"
+        }
+      }
+    },
+    "Appointments": {
+      ".indexOn": ["doctorId", "patientId"],
+      ".read": "auth != null && (query.orderByChild == 'doctorId' || query.orderByChild == 'patientId') && query.equalTo == auth.uid",
+      "$appointmentId": {
+        ".read": "auth != null && (data.child('doctorId').val() == auth.uid || data.child('patientId').val() == auth.uid)",
+        ".write": "auth != null && ((!data.exists() && newData.child('patientId').val() == auth.uid) || (data.exists() && (data.child('patientId').val() == auth.uid || data.child('doctorId').val() == auth.uid)))"
+      }
+    },
+    "terms_and_conditions": {
+      ".read": "auth != null",
+      ".write": false
+    }
+  }
+}

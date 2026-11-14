@@ -115,10 +115,10 @@ public class FinalPageFragment extends Fragment {
         tv_appointment_charge.setText(appointmentDetailModel.getAppointmentCharge());
         if (Objects.equals(appointmentDetailModel.getAppointmentMode(), "Clinic Visit")) {
             tv_clinic_address.setText(appointmentDetailModel.getDoctorClinicAddress());
-            tv_clinic_address.setVisibility(View.VISIBLE);
+            ((View) tv_clinic_address.getParent()).setVisibility(View.VISIBLE);
         } else {
             tv_appointment_charge.setText(appointmentDetailModel.getAppointmentCharge());
-            tv_clinic_address.setVisibility(View.GONE);
+            ((View) tv_clinic_address.getParent()).setVisibility(View.GONE);
         }
 
     }

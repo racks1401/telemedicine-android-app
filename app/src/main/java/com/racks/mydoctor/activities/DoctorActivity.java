@@ -1,5 +1,7 @@
 package com.racks.mydoctor.activities;
 
+import com.racks.mydoctor.helper.InsetsHelper;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -38,6 +40,7 @@ public class DoctorActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor);
+        InsetsHelper.applySystemBarInsets(this);
 
         BottomNavigationView bottomBar = findViewById(R.id.bottom_bar2);
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_doctor);

@@ -1,5 +1,7 @@
 package com.racks.mydoctor.activities;
 
+import com.racks.mydoctor.helper.InsetsHelper;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -37,6 +39,7 @@ public class AppointmentDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appointment_detail);
+        InsetsHelper.applySystemBarInsets(this);
 
         tv_doctor_name = findViewById(R.id.tv_doctor_name);
         tv_doctor_speciality = findViewById(R.id.tv_doctor_speciality);
@@ -100,9 +103,9 @@ public class AppointmentDetailActivity extends AppCompatActivity {
            tv_appointment_charge.setText(appointmentDetailModel.getAppointmentCharge());
            if (appointmentDetailModel.getDoctorClinicAddress()!=null && !Objects.equals(appointmentDetailModel.getDoctorClinicAddress(), "")){
                tv_clinic_address.setText(appointmentDetailModel.getDoctorClinicAddress());
-               tv_clinic_address.setVisibility(View.VISIBLE);
+               ((View) tv_clinic_address.getParent()).setVisibility(View.VISIBLE);
            }else{
-               tv_clinic_address.setVisibility(View.GONE);
+               ((View) tv_clinic_address.getParent()).setVisibility(View.GONE);
            }
            if (appointmentDetailModel.getDoctorProfileUrl()!=null){
                Glide.with(this)

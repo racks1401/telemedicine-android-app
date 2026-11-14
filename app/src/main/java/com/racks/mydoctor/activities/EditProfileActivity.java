@@ -1,5 +1,7 @@
 package com.racks.mydoctor.activities;
 
+import com.racks.mydoctor.helper.InsetsHelper;
+
 import java.util.HashMap;
 import java.util.Map;
 import com.racks.mydoctor.helper.SharedPreferenceManager;
@@ -58,6 +60,7 @@ public class EditProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
+        InsetsHelper.applySystemBarInsets(this);
         et_fullName = findViewById(R.id.et_fullName);
         et_email = findViewById(R.id.et_email);
         et_phone = findViewById(R.id.et_phone);
