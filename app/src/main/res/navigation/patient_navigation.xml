@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/bottom_nav_home">
+
+    <fragment
+        android:id="@+id/bottom_nav_home"
+        android:name="com.racks.mydoctor.fragments.PatientHomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_patient_home" />
+
+    <fragment
+        android:id="@+id/bottom_nav_notification"
+        android:name="com.racks.mydoctor.fragments.NotificationFragment"
+        android:label="@string/menu_notification"
+        tools:layout="@layout/fragment_notification" />
+
+    <fragment
+        android:id="@+id/bottom_nav_profile"
+        android:name="com.racks.mydoctor.fragments.PatientProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_patient_profile" />
+    <fragment
+        android:id="@+id/bottom_nav_appointment"
+        android:name="com.racks.mydoctor.fragments.AppointmentFragment"
+        android:label="@string/menu_appointment"
+        tools:layout="@layout/fragment_appointment" />
+    <fragment
+        android:id="@+id/doctorHomeFragment"
+        android:name="com.racks.mydoctor.fragments.DoctorHomeFragment"
+        android:label="@string/menu_doctor_home"
+        tools:layout="@layout/fragment_doctor_home"/>
+</navigation>

@@ -1,0 +1,74 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+
+# 🔹 Gradle & Build Files
+.gradle/
+build/
+*/build/
+
+
+# 🔹 IDE (Android Studio / IntelliJ)
+.idea/
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# 🔹 OS Generated Files
+Thumbs.db
+
+
+# 🔹 Android Studio / Native Build
+captures/
+.externalNativeBuild/
+.cxx/
+
+# 🔹 Build Outputs
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# 🔹 Logs
+*.log
+
+
+# 🔹 Firebase (safe even if unused)
+google-services.json
+
+
+# 🔹 Keystore (VERY IMPORTANT)
+*.jks
+*.keystore
+
+
+# 🔹 Secrets / Environment\
+.env
+*.properties
+
+# 🔹 Optional API Key Files
+res/values/secrets.xml
+res/values/api_keys.xml
+
+# Keep Gradle config needed to build (local.properties stays ignored above)
+!gradle.properties
+!gradle/wrapper/gradle-wrapper.properties
+
+# Release outputs
+app/release/

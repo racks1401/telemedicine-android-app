@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_42sdp"
+            android:text="Profile"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/_16ssp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/navigationSeparationColor" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_header"
+        android:scrollbars="none"
+        android:layout_above="@+id/tv_app_version">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ig_profile"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:contentDescription="TODO"
+                android:src="@drawable/profile_placeholder" />
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_8sdp"
+                android:gravity="center"
+                android:text="UserName not found"
+                android:textSize="@dimen/_13ssp" />
+
+            <TextView
+                android:id="@+id/tv_user_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Email not found"
+                android:textSize="@dimen/_11ssp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/bg_profile_options"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_account_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawablePadding="@dimen/_10sdp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_9sdp"
+                android:text="Account Setting"
+                android:textSize="@dimen/_12ssp"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableStartCompat="@drawable/ic_manage_accounts" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/profile_options_SeparationColor" />
+
+            <TextView
+                android:id="@+id/tv_account_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawablePadding="@dimen/_10sdp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_9sdp"
+                android:text="History"
+                android:textSize="@dimen/_12ssp"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableStartCompat="@drawable/ic_history" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/profile_options_SeparationColor" />
+
+            <TextView
+                android:id="@+id/tv_notification_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawablePadding="@dimen/_10sdp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_9sdp"
+
+                android:text="Notification Setting"
+                android:textSize="@dimen/_12ssp"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableStartCompat="@drawable/ic_edit_notifications" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/profile_options_SeparationColor" />
+
+            <TextView
+                android:id="@+id/tv_appearance_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawablePadding="@dimen/_10sdp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_9sdp"
+                android:text="Appearance"
+
+                android:textSize="@dimen/_12ssp"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableStartCompat="@drawable/ic_dark_mode" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/profile_options_SeparationColor" />
+
+
+            <TextView
+                android:id="@+id/tv_rate_us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawablePadding="@dimen/_10sdp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_9sdp"
+                android:text="Rate Us"
+
+                android:textSize="@dimen/_12ssp"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableStartCompat="@drawable/thumbs_up" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/profile_options_SeparationColor" />
+
+
+            <TextView
+                android:id="@+id/tv_privacy_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawablePadding="@dimen/_10sdp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_9sdp"
+
+                android:text="Privacy and Policy"
+                android:textSize="@dimen/_12ssp"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableStartCompat="@drawable/policy" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/profile_options_SeparationColor" />
+
+
+            <TextView
+                android:id="@+id/tv_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:drawablePadding="@dimen/_10sdp"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_9sdp"
+                android:text="About Us"
+                android:textSize="@dimen/_12ssp"
+                app:drawableEndCompat="@drawable/ic_chevron_right"
+                app:drawableStartCompat="@drawable/about_us" />
+
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/logout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        android:text="Logout"
+        android:textSize="@dimen/_12ssp"
+        app:drawableTopCompat="@drawable/ic_logout_24" />
+
+    </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_app_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:gravity="center"
+        android:text="Version: 1.1" />
+
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_nav_home"
+        android:icon="@drawable/ic_outline_home_24"
+        android:title="@string/menu_home" />
+    <item
+        android:id="@+id/bottom_nav_appointment"
+        android:icon="@drawable/baseline_event_note_24"
+        android:title="@string/menu_appointment" />
+    <item
+        android:id="@+id/bottom_nav_notification"
+        android:icon="@drawable/baseline_notifications_active_24"
+        android:title="@string/menu_notification" />
+    <item
+        android:id="@+id/bottom_nav_profile"
+        android:icon="@drawable/ic_outline_person_24"
+        android:title="@string/menu_profile" />
+</menu>

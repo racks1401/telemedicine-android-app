@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/book_appointment_navigation"
+    app:startDestination="@id/chooseDateAndTimeFragment">
+
+    <fragment
+        android:id="@+id/chooseDateAndTimeFragment"
+        android:name="com.racks.mydoctor.fragments.ChooseDateAndTimeFragment"
+        android:label="fragment_choose_date_and_time"
+        tools:layout="@layout/fragment_choose_date_and_time" >
+        <action
+            android:id="@+id/action_chooseDateAndTimeFragment_to_patientDetailFragment"
+            app:destination="@id/patientDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientDetailFragment"
+        android:name="com.racks.mydoctor.fragments.PatientDetailFragment"
+        android:label="PatientDetailFragment"
+        tools:layout="@layout/fragment_patient_detail" >
+        <action
+            android:id="@+id/action_patientDetailFragment_to_modeSelectionFragment"
+            app:destination="@id/modeSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalPageFragment"
+        android:name="com.racks.mydoctor.fragments.FinalPageFragment"
+        android:label="fragment_final_page"
+        tools:layout="@layout/fragment_final_page" >
+        <action
+            android:id="@+id/action_finalPageFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/modeSelectionFragment"
+        android:name="com.racks.mydoctor.fragments.ModeSelectionFragment"
+        android:label="fragment_mode_selection"
+        tools:layout="@layout/fragment_mode_selection" >
+        <action
+            android:id="@+id/action_modeSelectionFragment_to_finalPageFragment"
+            app:destination="@id/finalPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.racks.mydoctor.fragments.PaymentFragment"
+        android:label="PaymentFragment"
+        tools:layout="@layout/fragment_payment" />
+</navigation>

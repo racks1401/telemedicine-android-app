@@ -1,0 +1,83 @@
+plugins {
+    alias(libs.plugins.androidApplication)
+    id 'com.google.gms.google-services'
+    id 'androidx.navigation.safeargs'
+}
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file("local.properties")
+
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+android {
+    namespace 'com.racks.mydoctor'
+    compileSdk = 36
+
+    defaultConfig {
+        applicationId "com.racks.mydoctor"
+        minSdk 23
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        config {
+            storeFile file(keystoreProperties['MYAPP_UPLOAD_STORE_FILE'])
+            storePassword keystoreProperties['MYAPP_UPLOAD_STORE_PASSWORD']
+            keyAlias keystoreProperties['MYAPP_UPLOAD_KEY_ALIAS']
+            keyPassword keystoreProperties['MYAPP_UPLOAD_KEY_PASSWORD']
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.config
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable true
+        }
+        release {
+            signingConfig signingConfigs.config
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.constraintlayout
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    implementation libs.activity
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation libs.firebase.auth
+    implementation libs.firebase.database
+    implementation libs.firebase.storage
+    implementation libs.ssp.android
+    implementation libs.sdp.android
+    implementation libs.circleimageview
+    implementation libs.glide
+    implementation libs.relex.circleindicator
+    implementation libs.ccp
+    implementation libs.play.services.auth
+    implementation libs.lottie
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.7.0"
+    implementation "androidx.lifecycle:lifecycle-livedata:2.7.0"
+    implementation "androidx.room:room-runtime:2.6.1"
+    annotationProcessor "androidx.room:room-compiler:2.6.1"
+    implementation 'com.faltenreich:skeletonlayout:5.0.0'
+}

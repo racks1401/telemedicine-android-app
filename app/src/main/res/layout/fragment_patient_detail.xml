@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.PatientDetailFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/next_button"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_back_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_9sdp"
+                    android:src="@drawable/ic_arrow_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Patients Detail"
+                    android:textSize="@dimen/_14ssp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/navigationSeparationColor" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_8sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Name"
+                        android:textSize="@dimen/_13ssp" />
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_patient_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_34sdp"
+                        android:layout_weight="1"
+                        android:padding="@dimen/_5sdp"
+                        android:hint="Name"
+                        android:background="@drawable/bg_stroke_only"
+                        android:text=""
+                        android:textSize="@dimen/_12ssp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_8sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Gender"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_39sdp"
+                        android:hint="Select Gender"
+                        android:layout_weight="1">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/patient_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_stroke_only"
+                            android:inputType="none"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_8sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Age(years)"
+                        android:textSize="@dimen/_13ssp" />
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_patient_age"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_34sdp"
+                            android:background="@drawable/bg_stroke_only"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:hint="Age"
+                            android:padding="@dimen/_6sdp"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textSize="@dimen/_12ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_8sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Weight(kg)"
+                        android:textSize="@dimen/_13ssp" />
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_patient_weight"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_34sdp"
+                            android:background="@drawable/bg_stroke_only"
+                            android:inputType="number"
+                            android:layout_weight="1"
+                            android:maxLength="3"
+                            android:hint="Weight"
+                            android:padding="@dimen/_6sdp"
+                            android:textSize="@dimen/_12ssp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_8sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="Blood Group"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_39sdp"
+                        android:hint="@string/blood_group"
+                        android:layout_weight="1">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/patient_blood_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/bg_stroke_only"
+                            android:inputType="none"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_stroke_only"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_selected_file_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="Upload your last Prescription" />
+
+                    <ImageView
+                        android:id="@+id/img_select_file"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_margin="@dimen/_3sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:src="@drawable/ic_folder_open_24" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_uploaded_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_4sdp">
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/upload_file_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:text="Upload" />
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/et_patient_symptoms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:gravity="start"
+                android:minHeight="@dimen/_80sdp"
+                android:textSize="@dimen/_12sdp"
+                android:background="@drawable/bg_stroke_only"
+                android:hint="Wite your problems and symptoms.."
+                android:padding="@dimen/_11sdp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/_5sdp"
+        android:text="Next" />
+</RelativeLayout>

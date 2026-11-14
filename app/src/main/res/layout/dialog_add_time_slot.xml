@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_5sdp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        android:text="Add time slots"
+        android:textSize="@dimen/_13ssp" />
+
+    <GridLayout
+        android:id="@+id/dialog_grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_stroke_only"
+        android:columnCount="4"
+        android:padding="@dimen/_5sdp">
+
+
+    </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="**Touch and hold to delete"
+        android:textColor="@color/red"/>
+
+    <CheckBox
+        android:id="@+id/add_slots_to_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check if slots are same for all days" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/tv_done"
+            android:padding="@dimen/_5sdp"
+            android:text="Cancel"
+            android:textSize="@dimen/_13ssp" />
+
+        <TextView
+            android:id="@+id/tv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="Done"
+            android:textSize="@dimen/_13ssp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

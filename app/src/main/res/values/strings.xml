@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">My Doctor</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_doctor_home">Doctor Dashboard</string>
+    <string name="menu_notification">Notification</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_appointment">Appointment</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="default_web_client_id">578457659049-52j805jnginoj0cpisk0b5b1c5na77ph.apps.googleusercontent.com</string>
+    <string-array name="dropdown_user_type">
+        <item>Doctor</item>
+        <item>Patient</item>
+    </string-array>
+
+    <string-array name="dropdown_items_gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="dropdown_items_blood_group">
+        <item>unknown</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+    <string-array name="autocomplete_items_qualification">
+        <item>unknown</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+
+    <string-array name="autocomplete_items_specialization">
+        <item>unknown</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+
+    <string name="doctor_user_type">"Doctor"</string>
+    <string name="patient_user_type">"Patient"</string>
+    <string name="text_login">Login</string>
+    <string name="registering_please_wait">Registering, please wait...</string>
+    <string name="logging_in_please_wait">Logging in, please wait...</string>
+    <string name="fetching_doctors">Fetching doctors...</string>
+    <string name="available_doctors">Available Doctors</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="or">OR</string>
+    <string name="mobile">Mobile</string>
+    <string name="password">Password</string>
+    <string name="logo">Logo</string>
+    <string name="google">Google</string>
+    <string name="reset">Reset</string>
+    <string name="sending_please_wait">Sending, please wait..</string>
+    <string name="send_reset_link">Send Reset Link</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="no_doctor_available_right_now">No Doctor Available right now..</string>
+    <string name="uploading_please_wait">Uploading, Please wait...</string>
+    <string name="upload">Upload</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="upcoming">Upcoming..</string>
+</resources>
